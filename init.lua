@@ -552,7 +552,7 @@ require('lazy').setup({
         },
         eslint = {},
         html = {},
-        stylelint = {
+        stylelint_lsp = {
           filetypes = { 'css', 'scss' },
         },
         tsserver = {},
