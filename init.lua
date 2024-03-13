@@ -199,9 +199,9 @@ vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[O]bsidian [
 vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[O]bsidian [T]oday: open/create a new daily note' })
 
 -- Keybinds for common commands
-vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
-vim.keymap.set('n', '<leader>bda', '<cmd>%bd<CR>', { desc = '[B]uffer [D]elete [A]ll' })
-vim.keymap.set('n', '<leader>bdo', '<cmd>%bd|e#<CR>', { desc = '[B]uffer [D]elete [O]ther' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete current' })
+vim.keymap.set('n', '<leader>bD', '<cmd>%bd<CR>', { desc = '[B]uffer [D]elete all' })
+vim.keymap.set('n', '<leader>bo', '<cmd>%bd|e#<CR>', { desc = '[B]uffer [O]nly keep' })
 vim.keymap.set('n', '<leader>bw', '<cmd>w<CR>', { desc = '[B]uffer [W]rite' })
 
 -- [[ Basic Autocommands ]]
