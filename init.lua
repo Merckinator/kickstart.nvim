@@ -198,6 +198,12 @@ vim.keymap.set('n', '<leader>og', '<cmd>ObsidianSearch<CR>', { desc = '[O]bsidia
 vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[O]bsidian [N]ew note' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[O]bsidian [T]oday: open/create a new daily note' })
 
+-- Keybinds for common commands
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
+vim.keymap.set('n', '<leader>bda', '<cmd>%bd<CR>', { desc = '[B]uffer [D]elete [A]ll' })
+vim.keymap.set('n', '<leader>bdo', '<cmd>%bd|e#<CR>', { desc = '[B]uffer [D]elete [O]ther' })
+vim.keymap.set('n', '<leader>bw', '<cmd>w<CR>', { desc = '[B]uffer [W]rite' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -289,6 +295,7 @@ require('lazy').setup({
 
       -- Document existing key chains
       require('which-key').register {
+        ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
         ['<leader>o'] = { name = '[O]bsidian', _ = 'which_key_ignore' },
